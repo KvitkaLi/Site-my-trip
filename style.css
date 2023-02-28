@@ -12,8 +12,22 @@ header{
     width: 100%;
     height: 60vh;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     position: relative;
+}
+.flex-item{
+	width: 300px;
+	height: 60px;
+	background-color: #fff;
+	margin-top: 175px;
+}	
+
+.text-item{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100px;
+	font: 1.2em sans-serif;
 }
 
 .text-name{
@@ -23,6 +37,7 @@ header{
     color: #381f06; 
     font-family: 'Commissioner', sans-serif;
 	font-size: 2em;
+
         
 }
 .img-item{
@@ -34,6 +49,7 @@ header{
 h4,h3{
 	margin: 20px auto 30px auto;
 	width: 68%;
+	text-align: justify;
 }
 
 .title-item > h3{
@@ -57,24 +73,18 @@ img:hover{
 	display: flex;
 	justify-content: center;
 }
-.flex-item{
-	width: 300px;
-	height: 60px;
-	background-color: #fff;
-	margin-top: 175px;
-}	
-.text-item{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100px;
-	font: 1.2em sans-serif;
+.foto-text{
+	width: 100%;
+}
+p{
+	text-align: justify;
 }
 
 h2{
 	font: 1.4em sans-serif;
 	font-weight: 600;
 	padding: 10px 0 10px 0;
+	margin: 0 auto;
 }
 
 ul {
@@ -87,6 +97,7 @@ nav{
 }
 .menu{
 	display: flex;
+	flex-wrap:wrap;
 }
 
 a {
@@ -120,4 +131,61 @@ li {
 li:hover .menu__submenu {
 	display: block; /*відображаємо підменю */
 }
-    
+
+/* -----медіа-запити для iPad, планшети (ориентація екрана Portrait та Landscape) ----------- */
+@media only screen
+and (min-device-width: 480px)
+and (max-device-width: 1024px) 
+
+{
+	/* ваші CSS-стили тут */
+    header{
+        width: 100%;
+        height: 60vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+   
+    .img-item{
+        display: flex;
+        justify-content:center;
+        width: 100%;  
+        flex-wrap:wrap;
+	}
+	.foto-trip{
+	margin: 10px;
+	min-width: 300px;
+	}
+	.text-name{
+		position: absolute;
+		top: 20%;
+		left: 30%;
+}
+
+/* ----- Смартфони (ориентація экрана Portrait и Landscape) ----------- */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+	header{
+        width: 100%;
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .img-item{
+        display: flex;
+        justify-content:center;
+        width: 100%;  
+        flex-wrap:wrap;
+	}
+	.foto-trip{
+	margin: 10px;
+	min-width: 200px;
+	}
+	.text-name{
+		position: absolute;
+		top: 10%;
+		left: 20%;
+}
